@@ -1,0 +1,144 @@
+.modal__container{
+    width: 400px;
+    
+
+    border: none;
+}
+
+.modal__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    font-weight: bold;
+}
+
+.modal__edit{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+}
+
+.modal__edit > input{
+    padding: 10px;
+}
+
+.button-close{
+    color: var(--color-white);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-1);
+
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal__edit > button{
+    padding: 10px;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-1);
+
+    cursor: pointer;
+}
+
+.modal__container--view{
+    width: 900px;
+    height: 400px;
+}
+
+.view-modal > p{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.view-modal > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-modal > div > input{
+    padding: 10px;
+    padding-right: 40px;
+    margin-right: -350px;
+}
+
+.view-modal > div > button{
+    padding: 10px;
+    border: solid 1px var(--color-1);
+    background-color: var(--color-1);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.view-modal > ul{
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.view-modal > ul > li{
+    border: 2px solid var(--color-black);
+
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.view-modal > ul > li > button{
+    padding: 10px;
+    border: solid 1px var(--color-1);
+    background-color: var(--color-1);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.modal__confirm{
+    width: 300px;
+    border: none;
+}
+
+.modal__confirm > div > p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.modal__confirm > div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.modal__confirm > div > button{
+    margin-top: 50px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+
+    border: none;
+
+    background-color: var(--color-3);
+    color: var(--color-white);
+
+}
+
+
+@media(max-width: 900px){
+    .view-modal > div > input{
+       
+        margin-right: 0px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/pages/register/index.css">
+    <script type="module" src="/src/pages/register/index.js" defer></script>
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="/src/assets/Ellipse 1 (2).png">
+            <h1>Kenzie Empresas</h1>
+        </div>
+        <button class="button-menu">Menu</button>
+    </header>
+
+    <div class="menu-hidden">
+        <button class="button-login">Login</button>
+        <button class="button-home">Home</button>
+    </div>
+
+    <main>
+        <form>
+            <h1>Cadastre-se</h1>
+            <input type="text" placeholder="Seu nome" id="username">
+            <input type="email" placeholder="Seu e-mail" id="email">
+            <input type="password" placeholder="Sua senha" id="password">
+            <input type="text" placeholder="Digite qual o seu nível profissional" id="professional_level">
+            <label for="professional_level">Níveis: estágio, júnior, pleno ou sênior</label>
+            <!-- <select name="level" id="levels">
+                <option value="escolher nivel">Escolher Nível</option>
+                <option value="estágio">estágio</option>
+                <option value="júnior">júnior</option>
+                <option value="pleno">pleno</option>
+                <option value="sênior">sênior</option>   
+            </select> -->
+            <button class="form__button-register">Cadastre-se</button>
+            <button class="form__button-back">Retornar</button>
+        </form>
+    </main>
+
+    <dialog class="toast">
+        <!-- <p>Não encontrado</p> -->
+    </dialog>
+</body>
+</html>

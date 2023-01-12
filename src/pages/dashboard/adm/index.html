@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/pages/dashboard/adm/index.css">
+    <link rel="stylesheet" href="/src/pages/dashboard/adm/modal.css">
+    <script type="module" src="/src/pages/dashboard/adm/index.js" defer></script>
+    <title>Adm</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="/src/assets/Ellipse 1 (2).png">
+            <h1>Kenzie Empresas</h1>
+        </div>
+        <button class="button-logout">Logout</button>
+    </header>
+
+    <main>
+        <section class="departments__section">
+            <div>
+                <h1>Departamentos</h1>
+                <button>Criar Departamento</button>
+            </div>
+
+            <ul class="departments__container">
+                <!-- <li>
+                    <p class="department-name">Department Name</p>
+                    <p class="department-description">Department Description</p>
+                    <p class="company-name">Company Name</p>
+                    <div>
+                        <button class="view-button">Visualizar</button>
+                        <button class="edit-button">Editar</button>
+                        <button class="delete-department-button">Excluir</button>
+
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+
+        <section class="users__section">
+            <div>
+                <h1>Usuários Cadastrados</h1>
+            </div>
+
+            <ul class="users__container">
+                <!-- <li>
+                    <p class="username">Department Name</p>
+                    <p class="level">Department Description</p>
+                    <p class="company-name">Company Name</p>
+                    <div>
+                        <button class="edit-button">Editar</button>
+                        <button class="delete-user-button">Excluir</button>
+
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+    </main>
+
+    <dialog class="modal__container">
+            
+    </dialog>
+
+    <dialog class="modal__container--view">
+            
+    </dialog>
+
+    <dialog class="modal__confirm">
+            
+    </dialog>
+
+    <dialog class="toast">
+
+    </dialog>
+</body>
+</html>
