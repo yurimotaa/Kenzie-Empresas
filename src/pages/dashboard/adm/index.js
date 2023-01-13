@@ -29,6 +29,7 @@ async function renderAllDepartments(){
 
 
 function createAllDepartments(data){
+    
     const li = document.createElement('li')
     const name = document.createElement('p')
     const description = document.createElement('p')
@@ -138,9 +139,13 @@ async function renderAllUsers(){
     const users = await allUsers()
 
     users.forEach(user => { 
-        const card = createAllUsers(user)
+        if(user.username != 'ADMIN'){
+            const card = createAllUsers(user)
+    
+            ul.appendChild(card)
 
-        ul.appendChild(card)
+        }
+
 
     })
     
@@ -354,6 +359,7 @@ function createViewModalTop(data){
     
     const p = document.createElement('p')
     p.innerText = `Usuários cadastrados para contratar: ${usersNames.join(', ')}`
+    p.classList.add('users-registereds')
 
     const ul = document.createElement('ul')
     const container = document.createElement('div')
@@ -487,7 +493,7 @@ function createModalEditDepart(data){
     btn.innerText = 'X'
     btnEdit.innerText = 'Salvar alterações'
     
-    inputDisc.placeholder = 'Digite a nova descrição'
+    inputDisc.value = data.description
     
     top.append(p, btn)
     div.append(top, inputDisc, btnEdit)    

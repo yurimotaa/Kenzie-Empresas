@@ -27,7 +27,7 @@ function loginForm(){
         const request = await login(newUser)
         
         
-        localStorage.setItem('@kenzieEmpresas:user', JSON.stringify(request))
+        localStorage.setItem('@kenzieEmpresas:token', JSON.stringify(request))
         
 
     })
@@ -56,7 +56,7 @@ function buttons(){
 }
 
 async function redirect(){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const verify = await verifyAdmUser(user)
  
    if(user){

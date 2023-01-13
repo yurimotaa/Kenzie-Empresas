@@ -24,11 +24,13 @@ async function renderData(){
 }
 
 function createData(data){
+    
     const section = document.createElement('section')
     const h2 = document.createElement('h2')
     const div = document.createElement('div')
     const pEmail = document.createElement('p')
     const pLevel = document.createElement('p')
+    const pModality = document.createElement('p')
     const button = document.createElement('button')
     
     button.classList.add('button-edit-user')
@@ -38,8 +40,9 @@ function createData(data){
     h2.innerText = data.username.toUpperCase()
     pEmail.innerText = data.email
     pLevel.innerText = data.professional_level
-    
-    div.append(pEmail, pLevel, button)
+    pModality.innerText = data.kind_of_work
+
+    div.append(pModality, pEmail, pLevel, button)
     section.append(h2, div)
     return section
 }
@@ -47,7 +50,7 @@ function createData(data){
 async function renderDepartmentDataOfUser(){
     const department = await departmentsOfUser()
     const main = document.querySelector('.department')
-    console.log(department)
+    
     department.forEach(dep => {
         main.appendChild(createDepartmentsUserData(dep))
 
@@ -78,7 +81,7 @@ async function renderDepartmentsOfUsers(){
     const department = await departmentsOfUser()
     const div = document.querySelector('.department')
     const users = department[0].users
-    console.log(users)
+    
 
     users.forEach(user => {
         div.appendChild(createDepartmentsUser(user))

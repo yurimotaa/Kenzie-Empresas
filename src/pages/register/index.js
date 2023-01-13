@@ -24,9 +24,9 @@ function registerForm(){
             input.value = ''
         })
         const request = await register(newUser)
-        /* localStorage.setItem('@kenzieEmpresas:user', JSON.stringify(request)) */
+        localStorage.setItem('@kenzieEmpresas:user', JSON.stringify(request))
         
-
+       
     })
 
     return newUser

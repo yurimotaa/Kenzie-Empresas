@@ -56,6 +56,10 @@
     margin-bottom: 40px;
 }
 
+.users-registereds{
+    line-height: 200%;
+}
+
 .view-modal > div{
     display: flex;
     align-items: center;
@@ -114,6 +118,7 @@
     align-items: center;
 
     font-weight: bold;
+    
 }
 
 .modal__confirm > div{

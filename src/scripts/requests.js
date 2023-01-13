@@ -48,6 +48,7 @@ export async function register(data){
         handleToast('Cadastrado com sucesso', '#4BA036')
         setTimeout(() => {
             dialog.close()
+            window.location.replace('/src/pages/login/index.html')
         }, 3000)
     }
 
@@ -77,7 +78,7 @@ export async function login(data){
         setTimeout(() => {
             dialog.close()
         }, 3000)
-        localStorage.setItem('@kenzieEmpresas:user', JSON.stringify(loginUserJson))
+        localStorage.setItem('@kenzieEmpresas:token', JSON.stringify(loginUserJson))
         const verify = await verifyAdmUser()
         if(verify.is_admin){
             window.location.replace('/src/pages/dashboard/adm/index.html')
@@ -91,7 +92,7 @@ export async function login(data){
 }
 
 export async function verifyAdmUser(){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
     const isAdm = await fetch(`http://localhost:6278/auth/validate_user`, {
         method: 'GET',
@@ -107,7 +108,7 @@ export async function verifyAdmUser(){
 }
 
 export async function getUser(){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const userGet = await fetch(`http://localhost:6278/users/profile`, {
@@ -126,7 +127,7 @@ export async function getUser(){
 
 
 export async function attUser(data){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const userAtt = await fetch (`http://localhost:6278/users`, {
@@ -145,7 +146,7 @@ export async function attUser(data){
 
 
 export async function allDepartments(){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const departments = await fetch(`http://localhost:6278/departments`, {
@@ -163,7 +164,7 @@ export async function allDepartments(){
 }
 
 export async function allUsers(){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const users = await fetch(`http://localhost:6278/users`, {
@@ -181,7 +182,7 @@ export async function allUsers(){
 }
 
 export async function createDepartment(data){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const department = await fetch (`http://localhost:6278/departments`, {
@@ -200,7 +201,7 @@ export async function createDepartment(data){
 }
 
 export async function deleteDepartment(id){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const department = await fetch(`http://localhost:6278/departments/${id}`, {
@@ -215,7 +216,7 @@ export async function deleteDepartment(id){
 
 
 export async function deleteUser(id){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const del = await fetch(`http://localhost:6278/admin/delete_user/${id}`, {
@@ -228,7 +229,7 @@ export async function deleteUser(id){
 }
 
 export async function departmentsById(id){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const departments = await fetch(`http://localhost:6278/departments/${id}`, {
@@ -246,7 +247,7 @@ export async function departmentsById(id){
 
 
 export async function updateProfile(data, id){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const profile = await fetch(`http://localhost:6278/admin/update_user/${id}`, {
@@ -280,7 +281,7 @@ export async function updateProfile(data, id){
 }
 
 export async function departmentsOfUser(){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const departments = await fetch(`http://localhost:6278/users/departments/coworkers`, {
@@ -298,7 +299,7 @@ export async function departmentsOfUser(){
 
 
 export async function editDepartment(data, uuid){
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const department = await fetch(`http://localhost:6278/departments/${uuid}`, {
@@ -317,7 +318,7 @@ export async function editDepartment(data, uuid){
 
 export async function hireUser(data){
     const dialog = document.querySelector('.toast')
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const userToHire = await fetch(`http://localhost:6278/departments/hire/`, {
@@ -351,7 +352,7 @@ export async function hireUser(data){
 
 export async function dismissUser(id){
     const dialog = document.querySelector('.toast')
-    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:user')) || {}
+    const user = JSON.parse(localStorage.getItem('@kenzieEmpresas:token')) || {}
     const token = user.token
 
     const userToDismiss = await fetch(`http://localhost:6278/departments/dismiss/${id}`, {
