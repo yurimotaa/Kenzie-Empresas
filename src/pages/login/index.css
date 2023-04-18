@@ -1,0 +1,194 @@
+body{
+    font-family: var(--font-family);
+}
+.menu-hidden{
+    position: absolute;
+    top: -50px;
+    right: 80px;
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    
+}
+
+header > div{
+    gap: 10px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--color-black);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button-menu{
+    padding: 10px;
+
+    background-color: var(--color-1);
+    color: var(--color-white);
+    border: solid var(--color-1);
+
+    font-weight: bold;
+
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+.button-register{
+    background-color: var(--color-white);
+    color: var(--color-1);
+    border: solid var(--color-1);
+
+    font-weight: bold;
+    
+    padding: 8px 26px;
+
+    cursor: pointer;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-home{
+    background-color: var(--color-1);
+    color: var(--color-white);
+    border: solid var(--color-1);
+
+    font-weight: bold;
+
+    padding: 8px 20px;
+
+    cursor: pointer;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.show-menu-mobile{
+    position: absolute;
+    top: 80px;
+    right: 110px;
+}
+
+main{
+    background-image: url(/src/assets/Rectangle\ 7.png);
+
+    width: 100vw;
+    height: 600px;
+    background-size: cover;
+    
+}
+
+form{
+    position: absolute;
+    right: 100px;
+    top: 120px;
+    margin: 0 auto;
+
+    width: 200px;
+    height: 350px;
+    
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-white);
+
+    padding: 10px;
+
+    gap: 20px;
+}
+
+form > h1{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+form > input{
+    padding: 10px;
+}
+
+.form__button-login{
+    padding: 10px;
+
+    background-color: var(--color-1);
+    color: var(--color-white);
+    font-weight: bold;
+    border: solid var(--color-1);
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form__button-back{
+    padding: 10px;
+
+    background-color: var(--color-white);
+    color: var(--color-1);
+    font-weight: bold;
+    border: solid var(--color-1);
+
+    cursor: pointer;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.toast{
+    top: 30px;
+    color: var(--color-white);
+}
+
+
+@media (min-width: 768px){
+    .button-menu{
+        margin-right: 160px;
+    }
+
+    .show-menu-mobile{
+        position: absolute;
+        top: 80px;
+        right: 330px;
+    }
+
+    form{
+        right: 330px;
+    }
+}
+
+@media (min-width: 1440px){
+    .button-menu{
+        display: none;
+    }
+
+    .menu-hidden{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        gap: 20px;
+    }
+
+    main{
+        background-image: url(/src/assets/Rectangle\ 7\ \(1\).png);
+    
+        width: 100vw;
+        height: 1000px;
+        background-size: cover;
+    }
+
+    form{
+        width: 500px;
+       right: 500px;
+    }
+
+}

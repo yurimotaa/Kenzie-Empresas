@@ -1,0 +1,213 @@
+body{
+    font-family: var(--font-family);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    box-shadow: 0px 13px 11px 0px rgba(0,0,0,0.75);
+
+    font-weight: bold;
+}
+
+header > div{
+    display: flex;
+    gap: 10px;
+}
+
+.button-logout{
+    padding: 10px 20px;
+    color: var(--color-1);
+    border: 1px solid var(--color-1);
+    background-color: var(--color-white);
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.departments__section{
+    display: flex;
+    flex-direction: column;
+    
+    width: 1000px;
+    max-width: 90%;
+   
+
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #A8A8A8;
+}
+
+.departments__section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.departments__section > div > h1{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.departments__section > div > button{
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--color-1);
+    color: var(--color-white);
+    font-weight: bold;
+    border: none;
+
+}
+
+.departments__container{
+    background-color: #F8F8F8;
+    margin-top: 10px;
+    padding: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+
+    gap: 10px;
+
+    height: 200px;
+}
+
+.departments__container > li{
+    background-color: var(--color-white);
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+    width: 200px;
+    height: 150px;
+
+    border-bottom: 1px solid var(--color-1);
+}
+
+
+.department-name{
+    font-weight: bold;
+    font-size: 16px;
+
+    
+}
+
+.department-description{
+    font-size: 12px;
+}
+
+.company-name{
+    font-size: 12px;
+}
+
+.departments__container > li > div{
+    display: flex;
+    gap: 5px;
+}
+
+.departments__container > li > div > button{
+    padding: 10px 5px;
+    color: var(--color-1);
+    border: 1px solid var(--color-1);
+    background-color: var(--color-white);
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.toast{
+    top: 20px;
+}
+
+.users__section{
+    display: flex;
+    flex-direction: column;
+    
+    width: 1000px;
+    max-width: 90%;
+   
+
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #A8A8A8;
+}
+
+.users__section > div{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.users__container{
+    background-color: #F8F8F8;
+    margin-top: 10px;
+    padding: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+
+    gap: 20px;
+
+    height: 300px;
+}
+
+.users__container > li{
+    background-color: var(--color-white);
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+    width: 200px;
+    height: 150px;
+
+    border-bottom: 1px solid var(--color-1);
+}
+
+
+.username{
+    font-weight: bold;
+    font-size: 16px;
+
+    
+}
+
+.level{
+    font-size: 12px;
+}
+
+.company-name{
+    font-size: 12px;
+}
+
+.users__container > li > div{
+    display: flex;
+    gap: 5px;
+}
+
+.users__container > li > div > button{
+    padding: 10px 5px;
+    color: var(--color-1);
+    border: 1px solid var(--color-1);
+    background-color: var(--color-white);
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
